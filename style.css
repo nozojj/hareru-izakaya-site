@@ -26,6 +26,8 @@ body {
   background-repeat: repeat;
 }
 
+
+
 img {
   display: block;
   max-width: 100%;
@@ -278,32 +280,48 @@ img {
 }
 
 .insta-gallery {
+  max-width: 1100px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 22px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .insta-item {
-  position: relative;
   display: block;
   overflow: hidden;
-  border-radius: 14px;
-  text-decoration: none;
-  aspect-ratio: 1 / 1;
-  background: #ddd;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 
 .insta-item img {
   width: 100%;
   height: 100%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  transition: transform 0.25s ease;
+  display: block;
+  transition: transform 0.4s ease;
+  filter: brightness(0.95);
 }
 
 .insta-item:hover img {
-  transform: scale(1.04);
+  transform: scale(1.05);
+}
+
+/* ボタン */
+.instagram-button {
+  display: inline-block;
+  margin: 32px auto 0;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: #556c3d;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.instagram-button:hover {
+  background: #40522f;
 }
 
 .insta-icon {
@@ -321,10 +339,6 @@ img {
   font-size: 0.85rem;
 }
 
-.instagram-button {
-  margin: 24px auto 0;
-  min-width: 340px;
-}
 
 /* footer */
 .footer {
@@ -380,6 +394,11 @@ img {
   color: rgba(255, 255, 255, 0.88);
 }
 
+.footer-address {
+  color: orange;
+}
+
+
 /* responsive */
 @media (max-width: 1200px) {
   .hero-inner {
@@ -420,7 +439,7 @@ img {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   body {
     background-size: auto, 420px;
   }
@@ -486,8 +505,8 @@ img {
   }
 
   .insta-gallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .footer-title {
